@@ -1,4 +1,3 @@
-
 output "public_dns_nameservers" {
   value = azurerm_dns_zone.public_dns.name_servers
 }
