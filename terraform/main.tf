@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "rg" {
-  name     = "rg-custom-dns-project"
-  location = "Central India"
+resource "azurerm_resource_group" "rg-azure-vnet-project" {
+  name     = var.resource_group_name
+  location = var.location
 }
