@@ -24,3 +24,40 @@ Azure, Linux, Apache, Azure DNS, Traffic Manager, Terraform, Bash, GitHub.
 - Infrastructure as Code.
 - High availability and disaster recovery.
 - DNS troubleshooting and endpoint monitoring.
+
+## Commands used for authentication 
+
+- Log in to Azure
+```
+- az login
+```
+
+- Create Service Principal 
+```
+az ad sp create-for-rbac -n az-demo --role="Contributor" --scopes="/subscriptions/$SUBSCRIPTION_ID"
+```
+Note: Use the values generated here to export the variables in the next step
+
+- Set env vars so that the service principal is used for authentication
+
+```
+export ARM_CLIENT_ID=""
+export ARM_CLIENT_SECRET=""
+export ARM_SUBSCRIPTION_ID=""
+export ARM_TENANT_ID=""
+```
+
+## Cleanup
+
+To avoid unnecessary Azure charges:
+
+```bash
+cd terraform
+terraform destroy
+```
+
+## NOTE:- 
+It is not safe to push a terraform.tfvars file to a public GitHub repository if it contains any sensitive information, passwords, API keys, tokens, or private configuration data.
+
+## Author
+Saranjib Kuanar
