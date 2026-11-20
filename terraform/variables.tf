@@ -16,11 +16,6 @@ variable "ssh_public_key_path" {
 }
 
 
-variable "admin_source_cidr" {
-  description = "Your public IP CIDR for SSH access (Format: 225.168.50.3/32)" 
-  type        = string
-}
-
 variable "location_map" {
   type = map(string)
 
@@ -28,9 +23,4 @@ variable "location_map" {
     primary   = "Central India"
     
   }
-}
-
-variable "dns_label_prefix" {
-  description = "Globally unique Azure public IP DNS prefix" 
-  type        = string
 }
