@@ -145,7 +145,7 @@ cat > /var/www/html/index.html <<'HTML'
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azure Custom DNS Store</title>
+<title>ZenithCosmos Shop</title>
 
 <style>
 * {
@@ -297,7 +297,7 @@ footer {
 <body>
 
 <header>
-    <div class="logo">AZURE STORE</div>
+    <div class="logo">ZenithCosmos Shop</div>
     <nav>
         <a href="#">Home</a>
         <a href="#products">Products</a>
@@ -365,10 +365,10 @@ footer {
 </section>
 
 <footer>
-    <h3>AZURE STORE</h3>
+    <h3>ZenithCosmos Shop</h3>
     <p>Hosted on Microsoft Azure Virtual Machine</p>
     <p>Custom DNS Website Project</p>
-    <p>© 2026 Azure Store</p>
+    <p>© 2026 ZenithCosmos Shop</p>
 </footer>
 
 </body>
