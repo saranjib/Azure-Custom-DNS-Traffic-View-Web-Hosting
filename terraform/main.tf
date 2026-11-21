@@ -12,8 +12,14 @@ locals {
       name     = "web-vm-01"
     }
    
+    secondary = {
+      location = "Southeast Asia"
+      address  = "10.2.0.0/16"
+      subnet   = "10.2.1.0/24"
+      name     = "web-vm-02"
+    }
   }
-} 
+}
 resource "azurerm_virtual_network" "vnet" {
   for_each = local.sites
 
@@ -59,7 +65,7 @@ resource "azurerm_network_security_group" "nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "22"
-    source_address_prefix      = "*"
+    source_address_prefix      = var.admin_source_cidr
     destination_address_prefix = "*"
   }
 }
@@ -72,6 +78,8 @@ resource "azurerm_public_ip" "pip" {
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
   sku                 = "Standard"
+
+  domain_name_label = "${var.dns_label_prefix}-${each.key}"
 }
 
 resource "azurerm_network_interface" "nic" {
