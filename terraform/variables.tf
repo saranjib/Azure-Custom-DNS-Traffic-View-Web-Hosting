@@ -16,11 +16,23 @@ variable "ssh_public_key_path" {
 }
 
 
+variable "admin_source_cidr" {
+  description = "Your public IP CIDR for SSH access"
+  type        = string
+}
+
+variable "dns_label_prefix" {
+  description = "Globally unique Azure public IP DNS prefix"
+  type        = string
+  default     = "zenithweb2026"
+
+}
+
 variable "location_map" {
   type = map(string)
 
   default = {
     primary   = "Central India"
-    
+    secondary = "Southeast Asia"
   }
 }
