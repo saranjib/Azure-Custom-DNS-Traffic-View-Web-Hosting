@@ -4,7 +4,7 @@ Designed and implemented a globally accessible website hosting architecture usin
 
 ## Architecture Diagram
 
-![Architecture](Architecture.jpg)
+![Architecture](Architecture.png)
 
 ---
 
