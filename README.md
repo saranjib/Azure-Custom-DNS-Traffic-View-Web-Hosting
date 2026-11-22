@@ -2,6 +2,12 @@
 
 Designed and implemented a globally accessible website hosting architecture using Azure Linux Virtual Machines, Azure Public DNS Zones, custom domain configuration, and Azure Traffic Manager.
 
+## Architecture Diagram
+
+![Architecture](architecture.jpg)
+
+---
+
 ## Key Features
 
 - Hosted websites using Apache on Azure Linux VMs.
