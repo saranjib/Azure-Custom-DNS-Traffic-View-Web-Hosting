@@ -65,5 +65,4 @@ terraform destroy
 ## NOTE:- 
 It is not safe to push a terraform.tfvars file to a public GitHub repository if it contains any sensitive information, passwords, API keys, tokens, or private configuration data.
 
-## Author
-Saranjib Kuanar
+
